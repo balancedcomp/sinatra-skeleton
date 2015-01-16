@@ -1,0 +1,28 @@
+## sinatra
+*.rbc
+*.sass-cache
+/pkg
+/doc/api
+/Gemfile.lock
+.rspec
+*.db
+config.yml
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+## Environment normalisation:
+/.bundle
+/vendor/bundle
+
+# npm bower
+/build/
+/bower_components/
+/node_modules/
+
+# etc
+*.swp
+*.swo
+*.bak

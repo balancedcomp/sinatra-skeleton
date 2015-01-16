@@ -1,0 +1,19 @@
+p
+  a href='edit' class='btn btn-outline-inverse btn-lg' 新しく登録する
+
+- if @tel.complete
+  h2 実行完了
+  p 何分前
+- else 
+  h2 待機中
+  dl
+    dt number
+    dd= @tel.number
+    dt body
+    dd= @tel.body
+    dt send_time
+    dd= @tel.send_time.strftime('%H時 %M分 %S秒')
+    dt updated_at
+    dd= @tel.updated_at
+  p
+    a href='remove' role='button' class='btn btn-warning' 解除
