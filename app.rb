@@ -22,12 +22,4 @@ class App < Sinatra::Base
 		slim :index
 	end
 
-	get %r{^/css/(.*)\.css$} do
-		scss :"scss/#{params[:captures].first}"
-	end
-
-	get %r{^/js/(.*)\.js$} do
-		coffee :"coffee/#{params[:captures].first}"
-	end
-
 end
