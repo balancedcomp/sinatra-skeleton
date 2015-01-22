@@ -1,5 +1,4 @@
 g = require 'gulp'
-$ = require('gulp-load-plugins')()
 browserSync = require 'browser-sync'
 gulpFilter = require 'gulp-filter' #文字列で対象ファイル探す？
 mainBowerFiles = require 'main-bower-files'  #bowerのファイル

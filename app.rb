@@ -3,8 +3,6 @@
 require 'sinatra/base'
 require "sinatra/config_file"
 require 'slim'
-require 'sass'
-require 'coffee-script'
 require 'active_record'
 
 ActiveRecord::Base.establish_connection(
