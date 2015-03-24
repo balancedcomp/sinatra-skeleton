@@ -45,7 +45,7 @@ g.task 'css', ->
 # brwoserSync
 g.task 'bs', ->
   browserSync.init(null, {
-	  proxy: 'hostname:9393'
+	  proxy: 'localhost:6000'
   })
 
 g.task 'bsReload', ->
