@@ -5,7 +5,7 @@ Skelton for creating web app.
 
 ## Description
 
-*****sinatra**  
+**sinatra**  
 activerecord for sqlite3  
 slim  
 rspec  
@@ -26,5 +26,6 @@ compile ssas & coffee-script
     - install from package.json
 - bower install
     - install from bower.json
+- change localhost for your domain in Procfile and gulp.coffee if you need.
 - bundle exec foreman start
     - execute shotgun and gulp commands
