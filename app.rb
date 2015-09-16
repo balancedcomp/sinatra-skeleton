@@ -1,4 +1,4 @@
-# encoding: utf-8                                                                
+# encoding: utf-8
 
 require 'sinatra/base'
 require "sinatra/config_file"
@@ -17,7 +17,7 @@ class App < Sinatra::Base
 	config_file 'config.yml'
 
 	get '/' do
-		slim :index
+		haml :index
 	end
 
 end

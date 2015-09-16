@@ -1,0 +1,13 @@
+!!! 5
+%html
+  %head
+    %meta{charset: 'utf-8'}
+    %title Change Me!
+    %script{src:"js/libs/jquery.js"}
+    %script{src:"js/libs/bootstrap.js"}
+    %script{src:="js/program.js"}
+    %link{href:"css/styles.css" rel:"stylesheet"}
+  body
+    .wrap.container-fluid
+      .main.row
+      == yield
