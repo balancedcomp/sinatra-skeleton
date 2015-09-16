@@ -1,13 +1,13 @@
 g = require 'gulp'
 #browserSync = require 'browser-sync'
-gulpFilter = require 'gulp-filter' #文字列で対象ファイル探す？
-mainBowerFiles = require 'main-bower-files'  #bowerのファイル
+gulpFilter = require 'gulp-filter' # Look for the target file in the string
+mainBowerFiles = require 'main-bower-files'  # bowerfiles
 sass = require 'gulp-sass'
 coffee = require 'gulp-coffee'
-plumber = require 'gulp-plumber'  #コンパイルエラー時に中断させない
+plumber = require 'gulp-plumber'  # You are not allowed to interrupt at compile time error
 del = require 'del'
 
-# bowerのファイルをpublic配下に
+# the file of bower under public
 g.task 'bower-files', ->
   jsFilter = gulpFilter('**/*.js')
   cssFilter = gulpFilter('**/*.css')
@@ -18,14 +18,14 @@ g.task 'bower-files', ->
 	  .pipe cssFilter
 	  .pipe g.dest('public/css/libs/')
 
-## assetsのscssをコンパイルしpublic配下に
+## compile SASS to css in public/css
 g.task 'css', ->
   g.src 'assets/sass/*.scss'
 	  .pipe plumber()
 	  .pipe sass()
 	  .pipe g.dest('public/css')
 
-# assetsのcoffeeをコンパイルしpublic配下に
+# compile coffeescript to js in public/js/
 g.task 'js', ->
   g.src 'assets/coffee/*.coffee'
 	  .pipe plumber()
@@ -41,7 +41,7 @@ g.task 'js', ->
 #g.task 'bsReload', ->
 #  browserSync.reload()
 
-# 削除
+# Delete Erry'thing
 g.task 'clean' , ->
   del [
 	  "public/js/libs/*"
