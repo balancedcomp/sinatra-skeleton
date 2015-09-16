@@ -1,5 +1,5 @@
 g = require 'gulp'
-browserSync = require 'browser-sync'
+#browserSync = require 'browser-sync'
 gulpFilter = require 'gulp-filter' #文字列で対象ファイル探す？
 mainBowerFiles = require 'main-bower-files'  #bowerのファイル
 sass = require 'gulp-sass'
@@ -33,13 +33,13 @@ g.task 'js', ->
 	  .pipe g.dest('public/js')
 
 # brwoserSync
-g.task 'bs', ->
-  browserSync.init(null, {
-	  proxy: 'localhost:6000'
-  })
+#g.task 'bs', ->
+#  browserSync.init(null, {
+#	  proxy: 'localhost:6000'
+#  })
 
-g.task 'bsReload', ->
-  browserSync.reload()
+#g.task 'bsReload', ->
+#  browserSync.reload()
 
 # 削除
 g.task 'clean' , ->
@@ -53,7 +53,7 @@ g.task 'clean' , ->
 # Build
 g.task 'build'  ,
 	[
-		'bs'
+#		'bs'
 		'bower-files'
 		'js'
 		'css'
@@ -63,5 +63,5 @@ g.task 'build'  ,
 g.task 'default', ['clean','build'], ->
   g.watch 'assets/coffee/*.coffee' ,['js']
   g.watch 'assets/sass/*.scss' ,['css']
-  g.watch 'app.rb', ['bsReload']
-  g.watch 'views/*.slim', ['bsReload']
+#  g.watch 'app.rb', ['bsReload']
+#  g.watch 'views/*.slim', ['bsReload']
