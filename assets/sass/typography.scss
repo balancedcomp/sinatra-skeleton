@@ -1,0 +1,8 @@
+@import 'encoded_fonts';
+@import 'colors.scss';
+
+h1 {
+  font-family: 'gotham-rounded';
+  font-weight: 100;
+  color: $brand_red;
+}
